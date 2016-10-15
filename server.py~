@@ -14,7 +14,7 @@ import math
 #from bson.objectid import ObjectId
 
 # Date handling
-import arrow # Replacement for datetime, based on moment.js
+#import arrow # Replacement for datetime, based on moment.js
 #import datetime # But we still need time
 #from dateutil import tz  # For interpreting local times
 
@@ -70,7 +70,7 @@ def loginGate():
 #    if account != None:
 #        flask.session['login'] = str(account.get('_id'))
 #        flask.session['name'] = account.get('duckId')
-        d = {'result':'success'}
+    d = {'result':'success'}
 #    else:
 #        d = {'result':'failed'}
     d = json.dumps(d)
@@ -144,7 +144,7 @@ def portalSelector():
     objId = request.args.get('portal', 0, type=str)
     app.logger.debug(objId)
     if objId == "user":
-        return flask.redirect(url_for('user'))
+        return flask.redirect(url_for('login'))
         
 @app.route("/_userSettings")
 def userSettings():

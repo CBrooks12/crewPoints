@@ -14,7 +14,7 @@ import math
 #from bson.objectid import ObjectId
 
 # Date handling
-import arrow # Replacement for datetime, based on moment.js
+#import arrow # Replacement for datetime, based on moment.js
 #import datetime # But we still need time
 #from dateutil import tz  # For interpreting local times
 
@@ -114,9 +114,9 @@ def crewPage():
 @app.route('/login')
 def login():
 #    if flask.session.get('login') != None:
-        return flask.redirect(url_for('user'))
+#        return flask.redirect(url_for('user'))
 #    else:
-#        return flask.render_template('login.html')
+        return flask.render_template('login.html')
 
 @app.route('/createUser')
 def createUser():
@@ -144,7 +144,7 @@ def portalSelector():
     objId = request.args.get('portal', 0, type=str)
     app.logger.debug(objId)
     if objId == "user":
-        return flask.redirect(url_for('user'))
+        return flask.redirect(url_for('login'))
         
 @app.route("/_userSettings")
 def userSettings():
