@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Login Page</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="../static/css/styling.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<!--NAV BAR-->
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/index">Crew Points</a>
+  </div>
+</nav>
+
+<!--LOGIN / SIGNUP BAR-->
+<br><br><br>
+<div class="container text-center bg-nav">
+  <div class="col-md-4 col-md-offset-4 vertical-center">
+    <div class="panel panel-default">
+      <!--switch between log in and sign up-->
+      <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" class="active"><a href="/login"><b>LOG IN</b></a></li>
+        <li role="presentation"><a href="/createUser"><b>SIGN UP</b></a></li>
+      </ul>
+      <br>
+      <!--form for user to input name and password-->
+      <div class="panel-body">
+        <form id="myForm">
+          <input type="text" id="duckId" name="duckId" class="form-control input-lg"placeholder="Duck ID"><br>
+          <input type="password" id="pwd" name="pwd" class="form-control input-lg" placeholder="Password"><br>
+          <input id="myBtn" class="btn btn-info btn-lg btn-block" type="button" value="Login">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+  $(document).ready(function(){
+      $("#myBtn").click(function(){
+          var duckId = document.getElementById("duckId").value;
+          var pwd = document.getElementById("pwd").value;
+          $.getJSON($SCRIPT_ROOT + '/_submitLoginRequest',
+                  { duckId: duckId, pwd: pwd},
+                  function(data) {
+                     var result = data.result;
+                     obj = JSON.parse(result);
+                     if(result == "result: failed"){
+                        alert("invalid username or password, please try again");
+                         }
+                    else{
+                        window.location = $SCRIPT_ROOT + "/user"
+                        }
+
+                  }); // End of the call to getJSON
+          });  // End of the function to be called when field changes
+     });   // end of what we do on document ready
+
+</script>
+</body>
+</html>

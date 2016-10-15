@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>User</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/styling.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<!--NAV BAR-->
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+       <a class="navbar-brand" href="/index">Crew Points</a>
+       <ul class="nav navbar-nav">
+        <li class="active"><a href="/user">My Points</a></li>
+        <li><a href="/adminCreate">Redeem Rewards</a></li>
+        <li><a href="/medals">Medals</a></li>
+        <li><a href="/the_crew">The Crew</a></li>
+      </ul>
+       <form class="navbar-form navbar-right" action="/_userSettings" method="get">
+          <button name="setting" type="submit" value="logout" class="btn btn-default">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container">
+
+    <div id ="username" class="text-center">
+        <h1>Hello {{session.name}}</h1>
+    </div>
+    <div id ="points" class="text-center">
+        <h1>{{session.crewPoints}}</h1>
+        <h3>Crew Points</h3>
+    </div>
+</div>
+<script>
+$( document ).ready(function() {
+    $("#username").hide(0).delay(300).fadeIn(2000)
+    $("#points").hide(0).delay(400).fadeIn(2000)
+});
+</script>
+</body>
+</html>

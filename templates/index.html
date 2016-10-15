@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Crew Points</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <!--NAV BAR-->
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/index">Crew Points</a>
+      <form class="navbar-form navbar-right" action="/_portal" method="get">
+      <button name="portal" type="submit" value="user" class="btn btn-default">Log In</button>
+  </form>
+    </div>
+  </nav>
+
+  <!---MAIN CONTENT-->
+  <div class="container">
+    <div class="jumbotron">
+    <h1>Welcome to <b>Crew Points</b></h1>
+    <p>Crew Points is a web app that allows students to earn reward points for attending athletic events.</p> <br>
+    <form action="/_portal" method="get" style="padding: 0 10 5 25;">
+     <button name="portal" type="submit" value="user" class="btn btn-info btn-lg">Log in or sign up</button></form>
+  </div>
+  </div>
+
+  <script type="text/javascript">
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    function myFunction(val){
+        document.getElementById("myForm").submit();
+    };
+</script>
+</div>
+</body>
+</html>
