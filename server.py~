@@ -9,9 +9,9 @@ import logging
 import random
 import math
 # Mongo database
-import pymongo
-from pymongo import MongoClient
-from bson.objectid import ObjectId
+#import pymongo
+#from pymongo import MongoClient
+#from bson.objectid import ObjectId
 
 # Date handling
 import arrow # Replacement for datetime, based on moment.js
@@ -31,12 +31,12 @@ app.debug = CONFIG.DEBUG
 app.logger.setLevel(logging.DEBUG)
 
 
-try:
-    dbclient = MongoClient(CONFIG.MONGO_URL)
-    db = dbclient.service
-    collectionAccounts = db.studentAccounts
-except:
-    print("Failure opening database.  Is Mongo running? Correct password?")
+#try:
+#    dbclient = MongoClient(CONFIG.MONGO_URL)
+#    db = dbclient.service
+#    collectionAccounts = db.studentAccounts  #for the student accounts
+#except:
+#    print("Failure opening database.  Is Mongo running? Correct password?")
     #sys.exit(1)
 
 #############
@@ -65,37 +65,37 @@ def page_not_found(error):
 def loginGate():
     duckId = request.args.get('duckId',0,type=str)
     pwd = request.args.get('pwd',0,type=str)
-    account = collectionAccounts.find_one({'duckId':duckId,'password':pwd})
+#    account = collectionAccounts.find_one({'duckId':duckId,'password':pwd})
     #app.logger.debug(account)
-    if account != None:
-        flask.session['login'] = str(account.get('_id'))
-        flask.session['name'] = account.get('duckId')
+#    if account != None:
+#        flask.session['login'] = str(account.get('_id'))
+#        flask.session['name'] = account.get('duckId')
         d = {'result':'success'}
-    else:
-        d = {'result':'failed'}
+#    else:
+#        d = {'result':'failed'}
     d = json.dumps(d)
     return jsonify(result = d)
 
 
-### Admin Page ###
+### user Page ###
 
 @app.route("/user")
 def user():
     app.logger.debug("user page entry")
-    app.logger.debug(flask.session.get('login'))
-    if flask.session.get('login') == None:
-        return flask.render_template('login.html')
-        
-        
-    #Possibly use this, but lets try to avoid the state if possible?
-    crewPoints = collectionAccounts.find_one({"_id":ObjectId(flask.session.get('login'))}).get("crewPoints")
-    flask.session['CrewPoints'] = crewPoints
+#    app.logger.debug(flask.session.get('login'))
+#    if flask.session.get('login') == None:
+#        return flask.render_template('login.html') 
+#Possibly use this, but lets try to avoid the state if possible?
+#    crewPoints = collectionAccounts.find_one({"_id":ObjectId(flask.session.get('login'))}).get("crewPoints")
+#    flask.session['CrewPoints'] = crewPoints
     
     return flask.render_template('user.html')
 
+
+##additional pages###
 @app.route("/userCreate")
 def userCreate():
-    app.logger.debug("user create page entry")
+#    app.logger.debug("user create page entry")
     return flask.render_template('userCreate.html')
 
 @app.route("/medals")
@@ -113,10 +113,10 @@ def crewPage():
 
 @app.route('/login')
 def login():
-    if flask.session.get('login') != None:
+#    if flask.session.get('login') != None:
         return flask.redirect(url_for('user'))
-    else:
-        return flask.render_template('login.html')
+#    else:
+#        return flask.render_template('login.html')
 
 @app.route('/createUser')
 def createUser():
@@ -124,10 +124,12 @@ def createUser():
 
 
 
-def removeState():
-    flask.session['name'] = None
-    flask.session['login'] = None
-    flask.session['CrewPoints'] = None
+
+##remove the current state###
+#def removeState():
+#    flask.session['name'] = None
+#    flask.session['login'] = None
+#    flask.session['CrewPoints'] = None
 
 
 
@@ -150,24 +152,24 @@ def userSettings():
     duckId = request.args.get('duckId',0,type=str)
     pwd = request.args.get('pwd',0,type=str)
     if setting  == "addUser":
-        if collectionAccounts.find_one({'duckId':duckId}) == None:
-            crewPoints = INITIAL_POINTS
-            record = {"duckId":duckId, "password":pwd, "date":arrow.utcnow().naive, "crewPoints": crewPoints}
-            collectionAccounts.insert(record)
+#        if collectionAccounts.find_one({'duckId':duckId}) == None:
+#            crewPoints = INITIAL_POINTS
+#            record = {"duckId":duckId, "password":pwd, "date":arrow.utcnow().naive, "crewPoints": crewPoints}
+#            collectionAccounts.insert(record)
             d = "added"
-            print d
-        else:
-            d = "account exists"
+#            print d
+#        else:
+#            d = "account exists"
     elif setting == "removeUser":
-        collectionAccounts.remove({'_id':ObjectId(flask.session.get('login'))})
-        removeState()
+#        collectionAccounts.remove({'_id':ObjectId(flask.session.get('login'))})
+#        removeState()
         return flask.redirect(url_for('login'))
     elif setting == "logout":
-        removeState()
+#        removeState()
         return flask.redirect(url_for('login'))
     else:
         d = "wat"
-    print d
+#    print d
     return jsonify(result = d)        
  
         
