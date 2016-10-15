@@ -1,9 +1,5 @@
 arrow==0.6.0
 boto==2.37.0
-ccsm==0.9.11.3
-chardet==2.0.1
-colorama==0.2.5
-command-not-found==0.3
 compizconfig-python==0.9.11.3
 dargparse==0.2.5
 defer==1.0.6
