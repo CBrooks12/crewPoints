@@ -26,7 +26,7 @@
   <!---MAIN CONTENT-->
   <div class="container">
     <div class="jumbotron">
-    <h1>Welcome to <b>Crew Points</b></h1>
+    <h1>Welcome to <b>Crewx Points</b></h1>
     <p>Crew Points is a web app that allows students to earn reward points for attending athletic events.</p> <br>
     <form action="/_portal" method="get" style="padding: 0 10 5 25;">
      <button name="portal" type="submit" value="user" class="btn btn-info btn-lg">Log in or sign up</button></form>
