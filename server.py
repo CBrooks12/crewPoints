@@ -34,7 +34,7 @@ app.logger.setLevel(logging.DEBUG)
 try:
     dbclient = MongoClient(CONFIG.MONGO_URL)
     db = dbclient.service
-    collectionAccounts = db.studentAccounts
+    collectionAccounts = db.studentAccounts  #for the student accounts
 except:
     print("Failure opening database.  Is Mongo running? Correct password?")
     #sys.exit(1)
@@ -77,26 +77,39 @@ def loginGate():
     return jsonify(result = d)
 
 
-### Admin Page ###
+### user Page ###
 
 @app.route("/user")
 def user():
     app.logger.debug("user page entry")
     app.logger.debug(flask.session.get('login'))
     if flask.session.get('login') == None:
-        return flask.render_template('login.html')
-        
-        
-    #Possibly use this, but lets try to avoid the state if possible?
+        return flask.render_template('login.html') 
+#Possibly use this, but lets try to avoid the state if possible?
     crewPoints = collectionAccounts.find_one({"_id":ObjectId(flask.session.get('login'))}).get("crewPoints")
     flask.session['CrewPoints'] = crewPoints
     
     return flask.render_template('user.html')
 
+
+##additional pages###
 @app.route("/userCreate")
 def userCreate():
     app.logger.debug("user create page entry")
     return flask.render_template('userCreate.html')
+
+@app.route("/medals")
+def medalsPage():
+    app.logger.debug("user create page entry")
+    return flask.render_template('medals.html')
+
+@app.route("/rewards")
+def rewardsPage():
+    return flask.render_template('rewards.html')
+    
+@app.route("/the_crew")
+def crewPage():
+    return flask.render_template('the_crew.html')
 
 @app.route('/login')
 def login():
@@ -111,10 +124,12 @@ def createUser():
 
 
 
+
+##remove the current state###
 def removeState():
     flask.session['name'] = None
     flask.session['login'] = None
-    flask.session['myClassDB'] = None
+    flask.session['CrewPoints'] = None
 
 
 

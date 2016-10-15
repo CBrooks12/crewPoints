@@ -12,9 +12,9 @@
 <body>
 
   <!--NAV BAR-->
-  <nav class="navbar navbar-inverse navbar-static-top">
+  <nav class="navbar navbar-inverse navbar-static-top navbar-custom">
     <div class="container">
-      <a class="navbar-brand" href="/index">Team Builder</a>
+      <a class="navbar-brand" href="/index">Crew Points</a>
       <form class="navbar-form navbar-right" action="/_portal" method="get">
       <button name="portal" type="submit" value="user" class="btn btn-default">Log In</button>
   </form>

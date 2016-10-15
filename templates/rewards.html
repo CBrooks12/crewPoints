@@ -18,8 +18,8 @@
   <div class="container">
        <a class="navbar-brand" href="/index">Crew Points</a>
        <ul class="nav navbar-nav">
-        <li class="active"><a href="/user">My Points</a></li>
-        <li><a href="/rewards">Redeem Rewards</a></li>
+        <li><a href="/user">My Points</a></li>
+        <li class="active"><a href="/adminCreate">Redeem Rewards</a></li>
         <li><a href="/medals">Medals</a></li>
         <li><a href="/the_crew">The Crew</a></li>
       </ul>
@@ -30,20 +30,10 @@
 </nav>
 
 <div class="container">
-
     <div id ="username" class="text-center">
-        <h1>Hello {{session.name}}</h1>
-    </div>
-    <div id ="points" class="text-center">
-        <h1>{{session.CrewPoints}}</h1>
-        <h3>Crew Points</h3>
+        <h1>Rewards</h1>
     </div>
 </div>
-<script>
-$( document ).ready(function() {
-    $("#username").hide(0).delay(300).fadeIn(2000)
-    $("#points").hide(0).delay(400).fadeIn(2000)
-});
-</script>
+
 </body>
 </html>

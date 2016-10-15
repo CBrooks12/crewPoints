@@ -69,7 +69,7 @@ def loginGate():
     #app.logger.debug(account)
     if account != None:
         flask.session['login'] = str(account.get('_id'))
-        flask.session['name'] = account.get('name')
+        flask.session['name'] = account.get('duckId')
         d = {'result':'success'}
     else:
         d = {'result':'failed'}
@@ -98,6 +98,19 @@ def userCreate():
     app.logger.debug("user create page entry")
     return flask.render_template('userCreate.html')
 
+@app.route("/medals")
+def medalsPage():
+    app.logger.debug("user create page entry")
+    return flask.render_template('medals.html')
+
+@app.route("/rewards")
+def rewardsPage():
+    return flask.render_template('rewards.html')
+    
+@app.route("/the_crew")
+def crewPage():
+    return flask.render_template('the_crew.html')
+
 @app.route('/login')
 def login():
     if flask.session.get('login') != None:
@@ -114,7 +127,7 @@ def createUser():
 def removeState():
     flask.session['name'] = None
     flask.session['login'] = None
-    flask.session['myClassDB'] = None
+    flask.session['CrewPoints'] = None
 
 
 

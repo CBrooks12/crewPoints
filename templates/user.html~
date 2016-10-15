@@ -13,12 +13,12 @@
 <body>
 
 <!--NAV BAR-->
-<nav class="navbar navbar-inverse navbar-static-top">
+<nav class="navbar navbar-inverse navbar-static-top navbar-custom">
   <div class="container">
        <a class="navbar-brand" href="/index">Crew Points</a>
        <ul class="nav navbar-nav">
         <li class="active"><a href="/user">My Points</a></li>
-        <li><a href="/adminCreate">Redeem Rewards</a></li>
+        <li><a href="/rewards">Redeem Rewards</a></li>
         <li><a href="/medals">Medals</a></li>
         <li><a href="/the_crew">The Crew</a></li>
       </ul>
@@ -34,7 +34,7 @@
         <h1>Hello {{session.name}}</h1>
     </div>
     <div id ="points" class="text-center">
-        <h1>{{session.crewPoints}}</h1>
+        <h1>{{session.CrewPoints}}</h1>
         <h3>Crew Points</h3>
     </div>
 </div>
