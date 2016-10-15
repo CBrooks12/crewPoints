@@ -18,6 +18,6 @@ dist:
 	#virtualenv env
 	#source env/bin/activate
 	pip install -r requirements.txt
-	python -m pip install pymongo
+	#python -m pip install pymongo
 	#pip freeze >requirements.txt
 
