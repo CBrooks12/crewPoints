@@ -37,22 +37,42 @@
                 <h1>Hello User!</h1>
             </div>
             <div id ="points" class="text-center">
-                <h1>25</h1>
-                <h3>Crew Points</h3>
-            </div>
-            <div id="trophy" class="text-center">
-                <h3>Recent Medal</h3>
-                <img src="../static/pictures/trophy.png" style="width:150px;height:150px;">
+                <h3>25 Crew Points</h3>
+                <h3>Duckling</h3>
+                <img src="../static/pictures/circleBar.png">
+                <h3>25 Points Until Rank Up</h3>
             </div>
         </div>
         <div class="col-md-4">
-            <h1>Upcoming Events</h1>
-            <img src="../static/pictures/uoBasketball.png">
+            <div>
+                <h1>Upcoming Events</h1>
+                <h3>UO vs ASU 7pm</h3>
+                <h3>40 bonus points</h3>
+                <img src="../static/pictures/uoBasketball.png">
+            </div>
         </div>
    </div>
 
-   <div class="col-md-3">
+   <div class="col-md-4">
+        <div id="trophy" class="text-center">
+            <h1>Recent Medal</h1>    
+        <div class="medal-pad" style="border:3px solid black" >
+                <img src="../static/pictures/trophy.png" style="width:150px;height:150px;">
+                <div>
+                    <p style="color:black padding:1px;"><u>Attend 10 Winning Games</u></p>
+                    <p style="color:black">20 Points</p>
+                </div>
+                <div style="padding:6px">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                            <span style="color:black">6 Wins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
    </div>
+
 </div>
 <script>
 $( document ).ready(function() {

@@ -83,3 +83,10 @@ body{
     font-size: 15px;
     
 }
+
+#levelBar {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
