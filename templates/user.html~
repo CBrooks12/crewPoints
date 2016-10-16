@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div>
+            <div class="text-center">
                 <h1>Upcoming Events</h1>
                 <h3>UO vs ASU 7pm</h3>
                 <h3>40 bonus points</h3>
@@ -74,14 +74,13 @@
                         </div>
                         
                     </div>
-                    
+                    <img src="../static/pictures/watermark.png">
                 </div>
             </div>
             
         </div>
         
    </div>
-<div class="footer"><img src="../static/pictures/watermark.png"></div>
 </div>
 <script>
 $( document ).ready(function() {
