@@ -3,15 +3,15 @@
 <title>User</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../static/css/styling.css">
   <link rel="stylesheet" type="text/css" href="../static/css/freelancer.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 
-<body>
+<body background="../static/pictures/background.jpg">
 
 <!--NAV BAR-->
 <nav class="navbar navbar-inverse navbar-static-top navbar-custom">
@@ -29,26 +29,36 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="text-center" id="page">
+    <div class="text-center">
+        <div class="col-md-4">
+            <div id ="username">
+                <!--<h1>Hello {{session.name}}</h1>-->
+                <h1>Hello User!</h1>
+            </div>
+            <div id ="points" class="text-center">
+                <h1>25</h1>
+                <h3>Crew Points</h3>
+            </div>
+            <div id="trophy" class="text-center">
+                <img src="../static/pictures/trophy.png" style="width:150px;height:150px;">
+                <h3>Recent Medal</h3>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h1>Upcoming Events</h1>
+            <img src="../static/pictures/uoBasketball.png">
+        </div>
+   </div>
 
-    <div id ="username" class="text-center">
-        <!--<h1>Hello {{session.name}}</h1>-->
-        <h1>Hello User!</h1>
-    </div>
-    <div id ="points" class="text-center">
-        <h1>25</h1>
-        <h3>Crew Points</h3>
-    </div>
-    <div id="trophy" class="text-center">
-        <h3>Recent Medal</h3>
-        <img src="../static/pictures/trophy.png" style="width:150px;height:150px;">
-    </div>
+   <div class="col-md-3">
+   </div>
 </div>
 <script>
 $( document ).ready(function() {
     $("#username").hide(0).delay(300).fadeIn(2000)
     $("#points").hide(0).delay(400).fadeIn(2000)
-    $("#trophy").hide(0).delay(800).fadeIn(2000)
+    $("#page").hide(0).delay(800).fadeIn(2000)
 });
 </script>
 </body>

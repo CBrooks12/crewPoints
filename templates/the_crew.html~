@@ -3,11 +3,11 @@
 <title>User</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../static/css/styling.css">
   <link rel="stylesheet" type="text/css" href="../static/css/freelancer.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -30,9 +30,14 @@
 </nav>
 
 <div class="container">
-
     <div id ="title" class="text-center">
         <h1>The Crew</h1>
+    </div>
+    <div class="about-text-section"
+        <p>Our crew consists of Computer Science, Mathematics, and Chemical Engineering majors. We have a freshmen, 2 sophomores, a junior, and a senior.
+        Our members are Areeba Turabi (UC Davis), Howard Lin (University of Oregon), Chris Brooks (University of Oregon),
+      Jack Brockway (University of Oregon), and Kaylene Lim (Oregon State University).</p>
+        <a href="https://docs.google.com/document/d/1uilZ3fWLHCicdUHUqwdjMrdSbGrYTd53pIRDvbTyDbM/edit?usp=sharing">Link to our business plan</a>
     </div>
 </div>
 
