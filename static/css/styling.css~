@@ -69,3 +69,17 @@
         margin: 0 0 30px;
     }
 }
+
+.medal-pad {
+    padding: 15px;
+}
+body{
+    padding: 40px;
+}
+.progress span{
+    display: block;
+    position: absolute;
+    width: 90%;
+    font-size: 20px;
+    
+}

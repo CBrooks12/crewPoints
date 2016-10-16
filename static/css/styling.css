@@ -73,3 +73,13 @@
 .medal-pad {
     padding: 15px;
 }
+body{
+    padding: 40px;
+}
+.progress span{
+    display: block;
+    position: absolute;
+    width: 90%;
+    font-size: 15px;
+    
+}
