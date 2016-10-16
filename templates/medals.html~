@@ -34,6 +34,51 @@
     <div id ="title" class="text-center">
         <h1>Medals</h1>
     </div>
+     <div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../static/pictures/icon.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/trophy.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/blackout.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+            <div class="col-md-3">
+                <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
+            </div>
+        </div>
+    </div>
+    
 </div>
 
 </body>
