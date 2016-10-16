@@ -39,7 +39,7 @@
             <div class="col-md-3 medal-pad" style="border:3px solid black; padding:8px" >
                 <img src="../static/pictures/icon.png" style="width:150px;height:150px;">
                 <div>
-                    <p style="color:black padding:1px;"><u>Sign up</u></p>
+                    <p style="color:black padding:1px;"><u>Sign Pp</u></p>
                     <p style="color:black">20 Points</p>
                 </div>
                 <div style="padding:6px">
@@ -82,7 +82,7 @@
                 <img src="../static/pictures/blackout.png" style="width:150px;height:150px;">
                 <div>
                     <p style="color:black padding:1px;"><u>Attend a Blackout</u></p>
-                    <p style="color:black">20 points</p>
+                    <p style="color:black">20 Points</p>
                 </div>
                 <div style="padding:6px">
                     <div class="progress">
@@ -112,7 +112,7 @@
                 <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
                 <div>
                     <p style="color:black padding:1px;"><u>Attend A Vollyball Game</u></p>
-                    <p style="color:black">400 points</p>
+                    <p style="color:black">400 Points</p>
                 </div>
                 <div style="padding:6px">
                     <div class="progress">
@@ -140,7 +140,7 @@
                 <img src="../static/pictures/placeholder.png" style="width:150px;height:150px;">
                 <div>
                     <p style="color:black padding:1px;"><u>Attend Soccer Game</u></p>
-                    <p style="color:black">10 points</p>
+                    <p style="color:black">10 Points</p>
                 </div>
                 <div style="padding:6px">
                     <div class="progress">
