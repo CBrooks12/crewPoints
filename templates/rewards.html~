@@ -11,6 +11,7 @@
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
 
 
 </head>
@@ -36,6 +37,7 @@
 <div class="container">
     <div id ="username" class="text-center">
         <h1>Rewards</h1>
+        <h1>25 Crew Points</h1>
     </div>
 </div>
 <div id="portfolio" class="container">
@@ -107,7 +109,9 @@
                 </div>
                 <img src="../static/img/starbucks01.png" class="img-responsive" alt="" style='border:3px solid #124734'>
             </a>
+            <img src="../static/pictures/watermark.png">
         </div>
+        
     </div>
 </div>
 
@@ -233,7 +237,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 </html>
